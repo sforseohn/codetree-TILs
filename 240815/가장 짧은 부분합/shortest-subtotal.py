@@ -9,6 +9,10 @@ for i in range(n-1):
     while (j < n):
         temp_sum = sum(nums[i:j+1])
         cur_range = j - i + 1
+
+        if cur_range > shortest_range:
+            break
+            
         if temp_sum >= s and cur_range < shortest_range:
             shortest_range = cur_range
             break
