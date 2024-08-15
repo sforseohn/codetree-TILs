@@ -28,4 +28,7 @@ for j in range(n):
             cnt += 1
             break
 
-print(cnt)
+if m == 1:
+    print(n*n)
+else:
+    print(cnt)
