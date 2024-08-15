@@ -5,7 +5,7 @@ nums = list(map(int, input().split()))
 # 연산
 shortest_range = n + 1
 for i in range(n-1):
-    j = i+1
+    j = i
     while (j < n):
         temp_sum = sum(nums[i:j+1])
         cur_range = j - i + 1
