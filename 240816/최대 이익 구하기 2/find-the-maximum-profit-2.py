@@ -6,9 +6,8 @@ for i in range(n):
     works.append((t, p))
 
 dp = [0] * n # 각 시점에서 가능한 최대 이익
-dp[0] = works[0][1]
 
-for i in range(1, n): # 각 시점마다
+for i in range(n): # 각 시점마다
     if i + works[i][0] > n: # n일 내에 마무리되지 않으면 건너뛰기
         continue
 
