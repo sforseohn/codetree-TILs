@@ -29,6 +29,6 @@ for j in range(n):
             break
 
 if m == 1:
-    print(n*n)
+    print(n*2)
 else:
     print(cnt)
