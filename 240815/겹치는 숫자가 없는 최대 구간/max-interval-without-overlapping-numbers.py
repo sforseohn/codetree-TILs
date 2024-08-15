@@ -8,12 +8,11 @@ seen = set()
 for right in range(n-1):
     new = nums[right]
 
-    if not new in seen: # 아직 발견되지 않았으면 추가
-        seen.add(new)
-    else:               # 중복 발생
-        while left <= right and new in seen:
-            seen.remove(nums[left])
-            left += 1
+    while left <= right and new in seen:
+        seen.remove(nums[left])
+        left += 1
+        
+    seen.add(new)
 
     current_range = right - left + 1
     max_range = max(max_range, current_range)
