@@ -8,7 +8,8 @@ seen = set()
 for right in range(n):
     new = nums[right]
 
-    while left <= right and new in seen:
+    # 중복이 있다면 없을 때까지 왼쪽 포인터 증가
+    while left <= right and new in seen: 
         seen.remove(nums[left])
         left += 1
 
