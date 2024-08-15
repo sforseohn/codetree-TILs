@@ -14,6 +14,7 @@ for i in range(n):
         
         if same_cnt == m:
             cnt += 1
+            same_cnt = 1
             break
 
 # 세로
@@ -26,6 +27,7 @@ for j in range(n):
         
         if same_cnt == m:
             cnt += 1
+            same_cnt = 1
             break
 
 if m == 1:
