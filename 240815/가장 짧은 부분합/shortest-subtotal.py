@@ -4,20 +4,18 @@ nums = list(map(int, input().split()))
 
 # 연산
 shortest_range = n + 1
-for i in range(n-1):
-    for j in range(i, n):
-        cur_range = j - i + 1
+current_sum = 0
+left = right = 0
 
-        if cur_range >= shortest_range:
-            break
+while right < n:
+    current_sum += nums[right]
 
-        sum_val = 0
-        for l in range(i, j + 1):
-            sum_val += nums[l]
+    while current_sum >= s:
+        shortest_range = min(shortest_range, right - left + 1)
+        current_sum -= nums[left]
+        left += 1
 
-        if sum_val >= s:
-            shortest_range = min(shortest_range, cur_range)
-            break
+    right += 1
 
 # 출력
 if shortest_range == n+1:
